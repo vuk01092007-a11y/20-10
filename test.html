@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Ngày 20/10 💖</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Segoe UI", sans-serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ffe0ec, #fff0f5, #ffd6e7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #a21caf;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 650px;
+            padding: 40px 25px;
+            margin: 30px auto;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 30px;
+            box-shadow: 0 10px 40px rgba(225, 29, 116, 0.2);
+            border: 2px solid white;
+            position: relative;
+            z-index: 2;
+            animation: appear 1.2s ease;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .flower {
+            font-size: 55px;
+            animation: swing 2s infinite ease-in-out;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(-8deg); }
+            50% { transform: rotate(8deg); }
+        }
+
+        h1 {
+            font-size: clamp(30px, 7vw, 48px);
+            color: #e11d74;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px #ffc1dc;
+        }
+
+        h2 {
+            font-size: 23px;
+            margin-bottom: 18px;
+            color: #be185d;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #7e2255;
+            margin: 15px 0;
+        }
+
+        .highlight {
+            color: #e11d74;
+            font-weight: bold;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 14px 28px;
+            font-size: 17px;
+            font-weight: bold;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #ec4899, #f43f5e);
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 5px 15px #f9a8d4;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 20px #f472b6;
+        }
+
+        #loichuc {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: #fff0f6;
+            border-radius: 20px;
+            border: 1px dashed #f472b6;
+            animation: appear 0.8s ease;
+        }
+
+        .footer {
+            font-size: 14px;
+            margin-top: 25px;
+            color: #be185d;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -50px;
+            pointer-events: none;
+            z-index: 1;
+            animation: fly linear forwards;
+        }
+
+        @keyframes fly {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .sparkle {
+            position: fixed;
+            top: -30px;
+            pointer-events: none;
+            animation: fall linear forwards;
+            z-index: 1;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="container">
+        <div class="flower">🌸💐🌸</div>
+
+        <h1>Happy Women's Day!</h1>
+        <h2>Chúc Mừng Ngày Phụ Nữ Việt Nam 20/10</h2>
+         <div class="footer">
+            Vũ Quốc Khánh gửi lời chúc ❤️
+        </div>
+        <p>
+            Gửi đến những người phụ nữ tuyệt vời nhất! 💗
+        </p>
+
+        <p>
+            Chúc bạn luôn <span class="highlight">xinh đẹp, hạnh phúc</span>,
+            luôn rạng rỡ như những đóa hoa và gặp thật nhiều
+            điều may mắn trong cuộc sống.
+        </p>
+
+        <p>
+            Mong rằng mỗi ngày của bạn đều ngập tràn tiếng cười,
+            yêu thương và những điều ngọt ngào nhất! 🌷
+        </p>
+
+        <button onclick="moLoiChuc()">
+            💌 Nhấn vào đây nhận lời chúc
+        </button>
+
+        <div id="loichuc">
+            <h2>💖 Gửi bạn yêu thương 💖</h2>
+            <p>
+                Bạn là một bông hoa đặc biệt của thế giới này.
+                Hãy luôn tự tin, vui vẻ và yêu thương bản thân nhé!
+                Chúc bạn có một ngày 20/10 thật ý nghĩa,
+                nhận được thật nhiều quà và luôn được yêu thương! 🎁
+            </p>
+            <p><strong>Chúc mừng 20/10! 🌹💕</strong></p>
+        </div>
+
+       
+    </main>
+
+    <script>
+        function moLoiChuc() {
+            const loiChuc = document.getElementById("loichuc");
+
+            if (loiChuc.style.display === "block") {
+                loiChuc.style.display = "none";
+            } else {
+                loiChuc.style.display = "block";
+                banTraiTim();
+            }
+        }
+
+        function banTraiTim() {
+            for (let i = 0; i < 25; i++) {
+                setTimeout(() => {
+                    const heart = document.createElement("div");
+                    heart.className = "heart";
+                    heart.innerHTML = ["💖", "💕", "💗", "❤️", "🌸"][
+                        Math.floor(Math.random() * 5)
+                    ];
+
+                    heart.style.left = Math.random() * 100 + "vw";
+                    heart.style.fontSize = (18 + Math.random() * 25) + "px";
+                    heart.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+                    document.body.appendChild(heart);
+
+                    setTimeout(() => heart.remove(), 7000);
+                }, i * 100);
+            }
+        }
+
+        // Hiệu ứng trái tim bay liên tục
+        setInterval(() => {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.textContent = Math.random() > 0.5 ? "💗" : "💕";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = (14 + Math.random() * 20) + "px";
+            heart.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 10000);
+        }, 700);
+
+        // Hiệu ứng cánh hoa rơi
+        setInterval(() => {
+            const flower = document.createElement("div");
+            flower.className = "sparkle";
+            flower.textContent = Math.random() > 0.5 ? "🌸" : "🌷";
+            flower.style.left = Math.random() * 100 + "vw";
+            flower.style.fontSize = (12 + Math.random() * 18) + "px";
+            flower.style.animationDuration = (5 + Math.random() * 5) + "s";
+
+            document.body.appendChild(flower);
+
+            setTimeout(() => flower.remove(), 10000);
+        }, 1200);
+    </script>
+
+</body>
+</html>
